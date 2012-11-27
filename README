@@ -1,0 +1,9 @@
+# Download YARP svn repository
+rsync -av yarp0.svn.sourceforge.net::svn/yarp0/* yarp0
+
+# Download and build svn2git
+git clone git://gitorious.org/svn2git/svn2git.git
+(cd svn2git; qmake; make)
+
+
+svn2git/svn-all-fast-export --identity-map account-map --rules yarp-rules yarp0

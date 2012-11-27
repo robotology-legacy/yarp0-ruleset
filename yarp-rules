@@ -1,0 +1,154 @@
+#
+# Created by Daniele E. Domenichelli <daniele.domenichelli@iit.it>
+#
+
+
+create repository yarp2
+end repository
+
+create repository yarp2-papers
+end repository
+
+create repository yarp2-platform
+end repository
+
+
+
+## YARP 1 ##
+
+match /trunk/yarp/
+  repository yarp2
+  branch yarp1
+end match
+
+
+## YARP 2 ##
+
+match /trunk/yarp2/
+  repository yarp2
+  branch master
+end match
+
+
+
+## Papers ##
+
+match /trunk/(Papers|Papers2|papers)/
+  repository yarp2-papers
+  branch master
+end match
+
+
+
+## Platforms ##
+
+match /trunk/platform/
+  repository yarp2-platform
+  branch master
+end match
+
+match /trunk/yarp/src/experiments/
+  repository yarp2-platform
+  branch yarp1
+end match
+
+
+
+## BRANCHES ##
+
+match /branches/yarp2-remake-cmake/
+  repository yarp2
+  branch remake-cmake
+end match
+
+match /branches/yarp-2.4/
+  repository yarp2
+  branch yarp-2.4
+end match
+
+
+
+## TAGS ##
+
+match /tags/creation/yarp/
+  repository yarp2
+  branch refs/tags/creation
+  annotated true
+end match
+
+match /tags/creation/Papers/
+  repository yarp2
+  branch refs/tags/creation
+  annotated true
+end match
+
+match /tags/arelease/Papers/
+  repository yarp2-papers
+  branch refs/tags/arelease
+  annotated true
+end match
+
+
+match /tags/version_1_0/yarp/
+  repository yarp2
+  branch refs/tags/v1.0
+  annotated true
+end match
+
+match /tags/Release-2_2_2_rc1/yarp2/
+  repository yarp2
+  branch refs/tags/v2.2.2
+  annotated true
+end match
+
+match /tags/yarp-(\d+).(\d+).(\d+)/
+  repository yarp2
+  branch refs/tags/v\1.\2.\3
+  annotated true
+end match
+
+match /trunk/$
+  action recurse
+end match
+
+match /trunk/yarp/$
+  action recurse
+end match
+
+match /trunk/yarp/src/$
+  action recurse
+end match
+
+match /branches/$
+  action recurse
+end match
+
+match /tags/$
+  action recurse
+end match
+
+match /tags/creation/$
+  action recurse
+end match
+
+match /tags/arelease/$
+  action recurse
+end match
+
+match /tags/initial/$
+  action recurse
+end match
+
+match /tags/Release-2_2_2_rc1/$
+  action recurse
+end match
+
+match /tags/version_1_0/$
+  action recurse
+end match
+
+
+
+# Ignore everything else
+match /
+end match
