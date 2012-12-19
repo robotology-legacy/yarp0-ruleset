@@ -2,6 +2,8 @@
 # Created by Daniele E. Domenichelli <daniele.domenichelli@iit.it>
 #
 
+create repository yarp1
+end repository
 
 create repository yarp2
 end repository
@@ -17,8 +19,8 @@ end repository
 ## YARP 1 ##
 
 match /trunk/yarp/
-  repository yarp2
-  branch yarp1
+  repository yarp1
+  branch master
 end match
 
 
