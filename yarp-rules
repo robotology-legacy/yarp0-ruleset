@@ -8,10 +8,10 @@ end repository
 create repository yarp2
 end repository
 
-create repository yarp2-papers
+create repository yarp-papers
 end repository
 
-create repository yarp2-platform
+create repository yarp-platform
 end repository
 
 
@@ -36,7 +36,7 @@ end match
 ## Papers ##
 
 match /trunk/(Papers|Papers2|papers)/
-  repository yarp2-papers
+  repository yarp-papers
   branch master
 end match
 
@@ -45,12 +45,12 @@ end match
 ## Platforms ##
 
 match /trunk/platform/
-  repository yarp2-platform
+  repository yarp-platform
   branch master
 end match
 
 match /trunk/yarp/src/experiments/
-  repository yarp2-platform
+  repository yarp-platform
   branch yarp1
 end match
 
@@ -85,7 +85,7 @@ match /tags/creation/Papers/
 end match
 
 match /tags/arelease/Papers/
-  repository yarp2-papers
+  repository yarp-papers
   branch refs/tags/arelease
   annotated true
 end match
