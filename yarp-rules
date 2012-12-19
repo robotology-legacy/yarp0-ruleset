@@ -73,13 +73,13 @@ end match
 ## TAGS ##
 
 match /tags/creation/yarp/
-  repository yarp2
+  repository yarp1
   branch refs/tags/creation
   annotated true
 end match
 
 match /tags/creation/Papers/
-  repository yarp2
+  repository yarp1
   branch refs/tags/creation
   annotated true
 end match
@@ -92,7 +92,7 @@ end match
 
 
 match /tags/version_1_0/yarp/
-  repository yarp2
+  repository yarp1
   branch refs/tags/v1.0
   annotated true
 end match
