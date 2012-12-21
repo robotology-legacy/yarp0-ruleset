@@ -82,7 +82,7 @@ end match
 ## yarp-www ##
 
 match /trunk/yarp-www/
-  repository yarp-nova
+  repository yarp-www
   branch master
 end match
 
