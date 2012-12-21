@@ -1,5 +1,10 @@
 /log-*
-yarp1
-yarp2
-yarp-papers
-yarp-platform
+/yarp1/
+/yarp2/
+/yarp-papers/
+/yarp-platform/
+/yarp-forge/
+/yarp-nova/
+/yarp-rules/
+/yarp-www/
+/*-co/
