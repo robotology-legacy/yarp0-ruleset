@@ -14,6 +14,14 @@ end repository
 create repository yarp-platform
 end repository
 
+create repository yarp-nova
+end repository
+
+create repository yarp-forge
+end repository
+
+create repository yarp-www
+end repository
 
 
 ## YARP 1 ##
@@ -54,6 +62,29 @@ match /trunk/yarp/src/experiments/
   branch yarp1
 end match
 
+
+## yarp-nova ##
+
+match /trunk/nova/
+  repository yarp-nova
+  branch master
+end match
+
+
+## yarp-forge ##
+
+match /trunk/yarp-forge/
+  repository yarp-forge
+  branch master
+end match
+
+
+## yarp-www ##
+
+match /trunk/yarp-www/
+  repository yarp-nova
+  branch master
+end match
 
 
 ## BRANCHES ##
