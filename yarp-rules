@@ -99,7 +99,15 @@ match /branches/yarp-2.4/
   branch yarp-2.4
 end match
 
+match /branches/yarp2-builder/
+  repository yarp2
+  branch yarp2-builder
+end match
 
+match /branches/yarp-2.3.20.x/
+  repository yarp2
+  branch yarp-2.3.20.x
+end match
 
 ## TAGS ##
 
@@ -137,6 +145,12 @@ end match
 match /tags/yarp-(\d+).(\d+).(\d+)/
   repository yarp2
   branch refs/tags/v\1.\2.\3
+  annotated true
+end match
+
+match /tags/yarp-(\d+).(\d+).(\d+).(\d+)/
+  repository yarp2
+  branch refs/tags/v\1.\2.\3.\4
   annotated true
 end match
 
