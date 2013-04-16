@@ -6,7 +6,7 @@ git clone git://gitorious.org/svn2git/svn2git.git
 (cd svn2git; qmake; make)
 
 
-svn2git/svn-all-fast-export --identity-map account-map --rules yarp-rules yarp0
+svn2git/svn-all-fast-export --identity-map account-map --rules yarp-rules --add-metadata yarp0
 
 
 # Post processing
@@ -16,4 +16,3 @@ $RULESETDIR/bin/parent-adder ../yarp2-parentmap
 $RULESETDIR/bin/remove-fb-backup-refs.sh
 $RULESETDIR/bin/remove-workbranch-refs.sh
 $RULESETDIR/bin/remove-cvs2svn-backup-tags.sh
-
