@@ -57,10 +57,6 @@ match /trunk/platform/
   branch master
 end match
 
-match /trunk/yarp/src/experiments/
-  repository yarp-platform
-  branch yarp1
-end match
 
 
 ## yarp-nova ##
@@ -109,6 +105,7 @@ match /branches/yarp-2.3.20.x/
   branch yarp-2.3.20.x
 end match
 
+
 ## TAGS ##
 
 match /tags/creation/yarp/
@@ -154,26 +151,6 @@ match /tags/yarp-(\d+).(\d+).(\d+).(\d+)/
   annotated true
 end match
 
-match /trunk/$
-  action recurse
-end match
-
-match /trunk/yarp/$
-  action recurse
-end match
-
-match /trunk/yarp/src/$
-  action recurse
-end match
-
-match /branches/$
-  action recurse
-end match
-
-match /tags/$
-  action recurse
-end match
-
 match /tags/creation/$
   action recurse
 end match
@@ -182,8 +159,20 @@ match /tags/arelease/$
   action recurse
 end match
 
-match /tags/initial/$
+match /tags/start/$
   action recurse
+end match
+
+match /tags/start/yarp2/
+  repository yarp2
+  branch refs/tags/start
+  annotated true
+end match
+
+match /tags/start/platform/
+  repository yarp-platform
+  branch refs/tags/start
+  annotated true
 end match
 
 match /tags/Release-2_2_2_rc1/$
@@ -194,6 +183,9 @@ match /tags/version_1_0/$
   action recurse
 end match
 
+match /tags/initial/$
+  action recurse
+end match
 
 
 # Ignore everything else
