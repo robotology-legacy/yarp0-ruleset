@@ -5,7 +5,7 @@
 create repository yarp1
 end repository
 
-create repository yarp2
+create repository yarp
 end repository
 
 create repository yarp-papers
@@ -35,7 +35,7 @@ end match
 ## YARP 2 ##
 
 match /trunk/yarp2/
-  repository yarp2
+  repository yarp
   branch master
 end match
 
@@ -86,22 +86,22 @@ end match
 ## BRANCHES ##
 
 match /branches/yarp2-remake-cmake/
-  repository yarp2
+  repository yarp
   branch remake-cmake
 end match
 
 match /branches/yarp-2.4/
-  repository yarp2
+  repository yarp
   branch yarp-2.4
 end match
 
 match /branches/yarp2-builder/
-  repository yarp2
+  repository yarp
   branch yarp2-builder
 end match
 
 match /branches/yarp-2.3.20.x/
-  repository yarp2
+  repository yarp
   branch yarp-2.3.20.x
 end match
 
@@ -133,20 +133,20 @@ match /tags/version_1_0/yarp/
   annotated true
 end match
 
-match /tags/Release-2_2_2_rc1/yarp2/
-  repository yarp2
+match /tags/Release-2_2_2_rc1/yarp/
+  repository yarp
   branch refs/tags/v2.2.2
   annotated true
 end match
 
 match /tags/yarp-(\d+).(\d+).(\d+)/
-  repository yarp2
+  repository yarp
   branch refs/tags/v\1.\2.\3
   annotated true
 end match
 
 match /tags/yarp-(\d+).(\d+).(\d+).(\d+)/
-  repository yarp2
+  repository yarp
   branch refs/tags/v\1.\2.\3.\4
   annotated true
 end match
@@ -164,7 +164,7 @@ match /tags/start/$
 end match
 
 match /tags/start/yarp2/
-  repository yarp2
+  repository yarp
   branch refs/tags/start
   annotated true
 end match
